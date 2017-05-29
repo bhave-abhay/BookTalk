@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BookTalk github page</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        header, footer {
+            display: block;
+        }
+
+        header {
+            height: 15%;
+            background-color: gray;
+        }
+        nav {
+            height: 5%;
+            background-color: lightgray;
+        }
+        main {
+            height: 75%;
+            background-color: lightblue;
+            display: block;
+            overflow: hidden;
+        }
+        footer {
+            height: 5%;
+            background-color: gray;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0px;
+        }
+        header h2{
+            font-size: 18px;
+            margin:0px;
+        }
+
+        nav ul {
+            display: block;
+            margin: 0px;
+        }
+        nav ul.MainMenu{
+
+        }
+        nav ul.ExtraMenu{
+            float: right;
+        }
+        nav ul li{
+            display: inline-block;
+            padding: 3px;
+            float:left;
+        }
+        nav ul li a{
+            display:block;
+            background-color: lightblue;
+        }
+        nav ul li a:hover{
+            background-color: lightcyan;
+        }
+
+        main aside.LeftColumn {
+            float: left;
+            height: inherit;
+            overflow: hidden;
+            width: 25%;
+            background-color: darkkhaki;
+        }
+
+        main section {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BookTalk...</h1>
+        <h2>Meet people, Read books</h2>
+    </header>
+    <nav>
+        <ul class="MainMenu">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Sign in / Register</a>
+            </li>
+        </ul>
+        <ul class="ExtraMenu">
+            <li>
+                <a href="#">FAQs</a>
+            </li>
+            <li>
+                <a href="#">Help</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <aside class="LeftColumn">
+            <ul>
+                <li>
+                    <a href="#">Users</a>
+                </li>
+                <li>
+                    <a href="#">Books</a>
+                </li>
+                <li>
+                    <a href="#">My watchlist</a>
+                </li>
+                <li>
+                    <a href="#">My Reputation: 3.1/10</a>
+                </li>
+            </ul>
+        </aside>
+        <section>
+            <h1>Book of the day</h1>
+            <div>
+                <h2>Animal Farm</h2>
+                <h3>George Orwel</h3>
+                <h2>Description</h2>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="#">BookTalk</a> | <a href="#">FAQ</a> | <a href="#">Privacy Policy</a></footer>
+</body>
+</html>
