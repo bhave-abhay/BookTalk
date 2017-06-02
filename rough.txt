@@ -1,0 +1,59 @@
+<?php
+
+session_start();
+echo $Username = $_POST['Username']; 
+echo $Password = md5($_POST['txtPW']) ;
+
+//$_SESSION['Username'] = $_POST['Username']; 
+//$_SESSION['txtPW'] = md5($_POST['txtPW']) ; 
+require("/DatabasePG/LibraryMSystemDB.php");
+$stmt = $db->prepare("SELECT sUsername , sPassword from treguser where sUsername ='".$Username."' AND sPassword='".$Password."'");
+$stmt->execute();
+$result = $stmt->fetch(); 
+print_r($result);
+echo $EmailAdd = $result['sUsername'];
+echo $Password = $result['sPassword'];
+if($Username == $result['sUsername'] && $Password == $result['sPassword']){
+
+	header ('Location: UserPages/UserHome.php');
+}
+else {
+	header ('Location:UserLoginPG.php');
+	//header ('Location: UserLogin.php?msg=Invalid Login');
+}
+
+?>
+
+<?php
+$Username = $_POST['Username']; 
+$Password = md5($_POST['txtPW']) ;
+
+//$_SESSION['Username'] = $_POST['Username']; 
+//$_SESSION['txtPW'] = md5($_POST['txtPW']) ; 
+require("/DatabasePG/LibraryMSystemDB.php");
+$stmt = $db->prepare("SELECT sUsername , sPassword from treguser where sUsername ='".$Username."'");
+$stmt->execute();
+$result = $stmt->fetch(); 
+print_r($result);
+echo $EmailAdd = $result['sUsername'];
+echo $Password = $result['sPassword'];
+
+if(empty($result))
+{
+	header ('Location: UserLoginPG.php');
+}
+if($Password == $result['sPassword']) 
+{
+	session_start();
+	$_SESSION['Username'] = $_POST['Username']; 
+	$_SESSION['txtPW'] = md5($_POST['txtPW']) ; 
+	header ('Location: UserPages/UserHome.php');
+}
+die;
+/*
+else {
+	header ('Location:UserLoginPG.php');
+	//header ('Location: UserLogin.php?msg=Invalid Login');
+}*/
+?>
+
