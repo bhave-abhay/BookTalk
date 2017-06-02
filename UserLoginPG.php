@@ -9,6 +9,7 @@ require("IndexMenu.php");
 <h1 class="control-label col-sm-7">User Login</h1>
 </div>
 <br/>
+<div style="text-align:center">
 <div class="form-group" align="center">
 <label class="control-label col-sm-4" for="UName">Email address/UserID:</label>
 <div class="col-sm-5">
@@ -26,15 +27,7 @@ require("IndexMenu.php");
 <button type="submit" class="btn btn-success" value="Login">Submit</button>
 </div>
 </div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+</div>
 </form>
 </div>
 </div>
